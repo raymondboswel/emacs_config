@@ -13,7 +13,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (golden-ratio magit geiser paredit))))
+ '(package-selected-packages
+   (quote
+    (speed-type dracula-theme tide company-lsp company ## projectile lsp-mode golden-ratio magit geiser paredit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -24,3 +26,16 @@
 (require 'golden-ratio)
 
 (golden-ratio-mode 1)
+
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+(require 'lsp-mode)
+(add-hook 'prog-mode-hook #'lsp)
+
+(require 'company-lsp)
+(push 'company-lsp company-backends)
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'dracula t)
