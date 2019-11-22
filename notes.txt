@@ -1,0 +1,6 @@
+
+# lsp
+When opening a file and the following is displayed in the mini buffer
+```xxx is not part of any project. Select action:
+
+Respond with Import project root
