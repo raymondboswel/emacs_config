@@ -15,7 +15,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (speed-type dracula-theme tide company-lsp company ## projectile lsp-mode golden-ratio magit geiser paredit))))
+    (yasnippet-snippets yasnippet speed-type dracula-theme tide company-lsp company ## projectile lsp-mode golden-ratio magit geiser paredit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
