@@ -39,3 +39,6 @@
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (load-theme 'dracula t)
+
+;; Set up Ido
+(require `ido)(setq ido-enable-flex-matching t)(setq ido-everywhere t)(ido-mode 1)
